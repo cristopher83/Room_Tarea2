@@ -2,20 +2,15 @@ package oop.parcial2.neighborhood;
 
 
 
-public class BedRoom {
+public class BedRoom extends Room{
     private boolean tv;
-    private int width;
-    private int height;
-    private String color;
     private BedSize bedSize;
 
 
     //Constructor
     public BedRoom(boolean tv, int width, int height, String color, BedSize bed_size) {
+        super(width,height,color);
         this.tv = tv;
-        this.width = width;
-        this.height = height;
-        this.color = color;
         this.bedSize = bed_size;
     }
 
@@ -36,29 +31,6 @@ public class BedRoom {
     public void setTv(boolean tv)
     {
         this.tv=tv;
-    }
-    public int getWidth()
-    {
-        return width;
-    }
-    public void setWidth(int width)
-    {
-        this.width=width;
-    }
-    public int getHeight()
-    {
-        return height;
-    }
-    public void setHeight(int height)
-    {
-        this.height=height;
-    }
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String color)
-    {
-        this.color = color;
     }
 
     //Builder
