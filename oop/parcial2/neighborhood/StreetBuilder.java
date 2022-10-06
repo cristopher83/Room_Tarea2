@@ -1,18 +1,19 @@
 package oop.parcial2.neighborhood;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class StreetBuilder {
     private String name;
-    private List<House> houses = new ArrayList<>(); //OBJECT REQUIRED
+    private TreeMap<Integer,House> houses; //OBJECT REQUIRED
 
+    public StreetBuilder(){
+        houses=new TreeMap<>();
+    }
     public StreetBuilder name(String name){
         this.name=name;
         return this;
     }
     public StreetBuilder house(int number,House house){
-        this.houses.add(house);
+        houses.put(number,house);
         return this;
     }
     public Street build(){

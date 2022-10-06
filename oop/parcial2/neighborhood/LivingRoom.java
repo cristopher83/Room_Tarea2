@@ -1,21 +1,17 @@
 package oop.parcial2.neighborhood;
 
-public class LivingRoom {
+public class LivingRoom extends Room{
     private int windows;
     private boolean tv;
     private boolean  homeTeather;
-    private int width;
-    private int height;
-    private String color;
+
 
     //Constructor
     public LivingRoom(int windows, boolean tv, boolean homeTeather, int width, int height, String color) {
+        super(width,height,color);
         this.windows = windows;
         this.tv = tv;
         this.homeTeather = homeTeather;
-        this.width = width;
-        this.height = height;
-        this.color = color;
     }
 
 
@@ -43,29 +39,6 @@ public class LivingRoom {
     public void getTeather(boolean homeTeather)
     {
         this.homeTeather=homeTeather;
-    }
-    public int getWidth()
-    {
-        return width;
-    }
-    public void setWidth(int width)
-    {
-        this.width=width;
-    }
-    public int getHeight()
-    {
-        return height;
-    }
-    public void setHeight(int height)
-    {
-        this.height=height;
-    }
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String color)
-    {
-        this.color = color;
     }
 
     //Builder

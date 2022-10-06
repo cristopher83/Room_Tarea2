@@ -1,16 +1,16 @@
 package oop.parcial2.neighborhood;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import com.sun.source.tree.Tree;
+
+import java.util.*;
 
 public class Street {
 
     private String name;
-    private List <House> houses ; //OBJECT NOT REQUIRED
+    private TreeMap<Integer,House> houses ; //OBJECT NOT REQUIRED
 
 
     //Constructor
-    public Street(String name, List<House> houses)
+    public Street(String name, TreeMap<Integer,House> houses)
     {
         this.name=name;
         this.houses=houses;
@@ -18,10 +18,10 @@ public class Street {
 
 
     //Methods
-    public List<House> getHouses() {
+    public TreeMap<Integer,House> getHouses() {
         return houses;
     }
-    public void setHouses(List<House> houses) {
+    public void setHouses(TreeMap<Integer,House> houses) {
         this.houses = houses;
     }
     public String getName()
